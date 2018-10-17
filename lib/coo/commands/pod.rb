@@ -4,7 +4,7 @@ class App
   command :pod do |c|
 
     c.desc '快速发布 pod 🚀'
-    c.command :release do |release|
+    c.command [:release, :r] do |release|
       release.action do |global, options, args|
         # TODO:
         # 检查是否为 git 仓库

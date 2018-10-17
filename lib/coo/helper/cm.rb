@@ -40,7 +40,7 @@ module Coo
       end
 
       # 利用 open3 执行 shell 命令
-      def self.open3(command_str, print_command: true, print_command_output: true)
+      def self.op3(command_str, print_command: true, print_command_output: true)
         puts current_time_str(command_str) if print_command
 
         result = ''

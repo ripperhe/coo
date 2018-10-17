@@ -1,12 +1,11 @@
 
 class App
   desc 'Git 命令快捷操作'
-  arg_name 'Describe arguments to git here'
   command :git do |c|
 
-    c.desc '测试'
-    c.command :test do |test|
-      test.action do |global, options, args|
+    # c.desc '测试'
+    # c.command :test do |test|
+    #   test.action do |global, options, args|
         # /Users/ripper/Desktop/ZYDebugoxx
         # /Users/ripper/Ripper/Code/Picooc/Picooc
         # Dir.chdir('/Users/ripper/Desktop/ZYDebugoxx') do
@@ -18,8 +17,8 @@ class App
         #   puts "#{a} : #{b}"
         # end
 
-      end
-    end
+    #   end
+    # end
 
     c.desc 'Git 远程仓库信息 '
     c.command [:webpage, :w] do |webpage|

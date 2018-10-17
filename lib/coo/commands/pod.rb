@@ -107,7 +107,7 @@ class App
         end
 
         if File.exist?(fastlane_file)
-          unless !File.directory?(fastlane_file)
+            if File.directory?(fastlane_file)
             puts "请将 #{fast_dir_name} 的文件夹删除, 或者重命名, 然后重新操作!".red
             exit
           end

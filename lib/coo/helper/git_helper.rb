@@ -115,7 +115,7 @@ module Coo
 
         table = Terminal::Table.new do |t|
           # t.title = 'Remotes'
-          t.headings = [{:value => 'remote', :alignment => :center}, {:value => 'url', :alignment => :center}, {:value => 'webpage', :alignment => :center}]
+          t.headings = [{:value => 'Remote', :alignment => :center}, {:value => 'URL', :alignment => :center}, {:value => 'Webpage', :alignment => :center}]
 
           first = true
           urls_webs_hash.each_pair do |key , value|
@@ -125,7 +125,7 @@ module Coo
               t.add_separator
             end
             value.each do |sub|
-              t.add_row [key ,sub['url'], sub['web']]
+              t.add_row [key ,sub['url'], sub['web'].blue]
             end
           end
         end

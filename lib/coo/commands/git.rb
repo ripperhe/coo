@@ -50,7 +50,14 @@ class App
         all_finish = CM.sys_commands(*commands) do |idx, flag|
           new_flag = flag
           if idx == 2 && flag != 0
-            new_flag = CM.sys 'git push --set-upstream origin master'
+            cmd = 'git push --set-upstream origin master'
+            Question.easy_make_sure? "Need to execute '#{cmd}'?" do |answer|
+              if answer
+                new_flag = CM.sys 'git push --set-upstream origin master'
+              else
+                exit
+              end
+            end
           end
           new_flag
         end

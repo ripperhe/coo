@@ -38,7 +38,7 @@ module Coo
       # @param [多个选项] options
       # @return [选中的值, -1 为直接 enter; 其他值为选中值得下标]
       def self.question_and_options(question_str, accept_enter, *options, &block)
-        if (question_str.to_s.empty? || options.length == 0)
+        if question_str.to_s.empty? || options.length == 0
           puts 'question_and_options 参数错误'
           exit
         end
@@ -75,7 +75,7 @@ module Coo
         end
 
         lower_limit = 0
-        if accept_enter == true
+        if accept_enter
           lower_limit = -1
         end
 

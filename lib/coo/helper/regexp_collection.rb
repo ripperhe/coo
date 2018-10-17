@@ -11,6 +11,10 @@ module Coo
         return /^[A-Za-z0-9_-]+$/
       end
 
+      def self.n_a_u_h_p_0_n
+        return /^([A-Za-z0-9_-]|\.)*$/
+      end
+
       # @return [单个 number alphabet]
       def self.n_a_1
         return /^[0-9A-Za-z]$/

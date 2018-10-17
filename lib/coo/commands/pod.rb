@@ -49,7 +49,7 @@ class App
         end
 
         version = nil
-        Question.remind_input("当前 spec 中的 version 为 #{current_spec_version}, 请输入框架即将发布的 version: ", RegexpCollection.n_a_u_h_0_n) do |value|
+        Question.remind_input("当前 spec 中的 version 为 #{current_spec_version}, 请输入框架即将发布的 version: ", RegexpCollection.n_a_u_h_p_0_n) do |value|
           if value.to_s.empty?
             version = podspec_file.bump_version('patch')
           else

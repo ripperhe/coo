@@ -19,5 +19,8 @@
 
 ## 功能
 
+* git 小抄
 * git ignore
 * gic cache
+
+* linux 命令小抄

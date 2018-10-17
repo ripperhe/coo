@@ -21,6 +21,6 @@ spec = Gem::Specification.new do |s|
   # s.add_runtime_dependency('fastlane', '~> 2.0')
 
   # development
-  s.add_development_dependency('rake', '~> 12.3')
+  # s.add_development_dependency('rake', '~> 12.3')
 
 end

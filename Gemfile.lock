@@ -1,0 +1,27 @@
+PATH
+  remote: .
+  specs:
+    coo (0.1.1)
+      colorize (~> 0.8)
+      gli (~> 2.18)
+      terminal-table (~> 1.8)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.8.1)
+    gli (2.18.0)
+    rake (12.3.1)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
+    unicode-display_width (1.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  coo!
+  rake (~> 12.3)
+
+BUNDLED WITH
+   1.16.2

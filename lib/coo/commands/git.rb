@@ -116,9 +116,26 @@ class App
         end
       end
 
+      remove.desc '删除 index, 用于使 gitignore 对添加 gitignore 之前的文件生效 (不会删除任何文件和 commit)'
+      remove.command [:index, :i] do |index|
+        index.action do |global, options, args|
+          Question.easy_make_sure? 'Are you sure remove all files from the index？' do |answer|
+            if answer
+              commands = [
+                  'git rm -r --cached .',
+                  'git add .'
+              ]
+              all_finish = CM.sys_commands(*commands)
+              if all_finish
+                puts '现在提交这次变更，所有文件都可以在 gitignore 管辖之内~'.green
+              end
+            end
+          end
+        end
+      end
+
+
     end
-
-
 
   end
 end

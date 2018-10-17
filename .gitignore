@@ -51,3 +51,6 @@ build-iPhoneSimulator/
 
 # RubyMine file
 .idea/
+
+# CocoaPods spec file 用于测试
+*.podspec
